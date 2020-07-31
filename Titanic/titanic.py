@@ -141,7 +141,7 @@ df_test.reset_index(inplace=True)
 predictions = pd.DataFrame(gbm.predict(X_test).astype(int))
 id = pd.DataFrame(df_test.PassengerId)
 
-#Preparig data for Kaggle
+#Preparing data for Kaggle
 predictions = id.join(predictions)
 predictions.rename(columns={0: "Survived"}, inplace=True)
 
